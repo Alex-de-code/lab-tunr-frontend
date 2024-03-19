@@ -10,10 +10,15 @@ const Songs = ({ songs }) => {
         All Songs View
       </h1>
       <div className="mx-10 mt-10">
-        <button className="bg-orange-500 hover:bg-orange-300">New Song</button>
+        <button
+          onClick={() => navigate("/songs/new")}
+          className="bg-orange-400 hover:bg-orange-200 px-2 py-1 my-4"
+        >
+          New Song
+        </button>
         <table className="table-auto rounded-lg border-collapse ">
           <thead>
-            <tr className="bg-green-900 text-white  border border-green-950">
+            <tr className="bg-green-900 text-white  border border-green-950 shadow">
               <th className="px-2 py-1">Favorite</th>
               <th className="px-4 py-2">Song</th>
               <th className="px-4 py-2">Artist</th>

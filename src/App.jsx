@@ -3,8 +3,9 @@ import { Route, Routes } from "react-router-dom";
 import NavBar from "./Components/NavBar";
 import Songs from "./Components/Songs";
 import Index from "./Components/Index";
-import Song from "./Components/Song";
 import SongDetail from "./Components/SongDetail";
+import SongEdit from "./Components/SongEdit";
+import SongNewForm from "./Components/SongNewForm";
 
 const App = () => {
   //define api url
@@ -16,7 +17,7 @@ const App = () => {
     fetch(`${API}`)
       .then((res) => res.json())
       .then((data) => setSongs(data));
-  }, []);
+  }, [songs]);
 
   return (
     <div>
@@ -25,6 +26,8 @@ const App = () => {
         <Route path="/" element={<Index />} />
         <Route path="/songs" element={<Songs songs={songs} />} />
         <Route path="/songs/:id" element={<SongDetail API={API} />} />
+        <Route path="/songs/:id/edit" element={<SongEdit API={API} />} />
+        <Route path="/songs/new" element={<SongNewForm API={API} />} />
       </Routes>
     </div>
   );

@@ -4,7 +4,7 @@ const Song = ({ song }) => {
   const navigate = useNavigate();
   return (
     <tr
-      className="bg-green-200 border border-green-950 hover:bg-green-50"
+      className="bg-green-200 border border-green-950 hover:bg-green-50 shadow"
       //remember to add the id to use navigate once set up
       onClick={() => navigate(`/songs/${song.id}`)}
     >

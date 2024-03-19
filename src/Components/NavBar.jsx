@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const NavBar = () => {
   return (
-    <div>
+    <div className="bg-zinc-300">
       <Link to={`/`}>
         <div>Tuner</div>
       </Link>
