@@ -111,6 +111,12 @@ const SongNewForm = ({ API }) => {
             type="submit"
             className="bg-orange-400 shadow px-2 py-1 hover:bg-orange-300"
           />
+          <button
+            onClick={() => navigate("/songs")}
+            className="bg-zinc-400 shadow px-2 py-1 hover:bg-zinc-300 ml-36"
+          >
+            Cancel
+          </button>
         </form>
       </div>
     </div>
